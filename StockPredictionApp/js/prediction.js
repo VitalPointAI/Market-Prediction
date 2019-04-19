@@ -110,7 +110,7 @@ $(document).ready(function () {
             
             // Get the datetime labels use in graph
             let labels = data.map(function (val) { return val['date']; });
-            
+            console.log(labels);
             // Process the data and create the train sets
             processData(data, timePortion).then(function (result) {
                 
