@@ -91,7 +91,7 @@ const cnn = function (model, data, epochs) {
     });
 }
 
-let url = 'https://api.iextrading.com/1.0/stock/%company%/chart/1y'
+//let url = 'https://api.iextrading.com/1.0/stock/%company%/chart/1y'
 let epochs = 100;
 let timePortion = 7;
 
@@ -105,7 +105,8 @@ $(document).ready(function () {
         print("Beginning Stock Prediction ...");
         let company = $('#company').val().trim();
         
-        $.getJSON(url.replace('%company%', company).toLowerCase()).then(function (data) {
+      //  $.getJSON(url.replace('%company%', company).toLowerCase()).then(function (data) {
+          $.getJSON("./data/Ethereum-Data.json").then(function (data) {
             
             // Get the datetime labels use in graph
             let labels = data.map(function (val) { return val['date']; });
