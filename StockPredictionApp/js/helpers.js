@@ -10,7 +10,7 @@ const processData = function (data, timePortion) {
 
         let features = [];
         for (let i = 0; i < size; i++) {
-            features.push(data[i]['close']);
+            features.push(data[i]['volume']);
         }
 
         // Scale the values
