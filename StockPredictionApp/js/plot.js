@@ -6,12 +6,13 @@ const plotData = function (data1, data2, label = null) {
     //limit chart data to last X number of data points
     var newdata1 = data1.slice(-50);
     var newdata2 = data2.slice(-50);
-    var N = label ? label : [...Array(Math.max(newdata1.length, newdata2.length)).keys().slice(-50)];
+    var N = label ? label : [...Array(Math.max(newdata1.length, newdata2.length)).keys()];
+    var newN = N.slice(-50);
 
     var config = {
         type: 'line',
         data: {
-            labels: N,
+            labels: newN,
             datasets: [{
                 label: 'Predicted',
                 fill: false,
