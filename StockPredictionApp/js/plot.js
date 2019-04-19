@@ -17,12 +17,12 @@ const plotData = function (data1, data2, label = null) {
                 fill: false,
                 backgroundColor: 'red',
                 borderColor: 'red',
-                data: data2,
+                data: newdata2,
             }, {
                 label: 'Actual',
                 backgroundColor: 'blue',
                 borderColor: 'blue',
-                data: data1,
+                data: newdata1,
                 fill: false,
             }]
         },
