@@ -93,7 +93,7 @@ const cnn = function (model, data, epochs) {
 
 //let url = 'https://api.iextrading.com/1.0/stock/%company%/chart/1y'
 let epochs = 100;
-let timePortion = 7;
+let timePortion = 2;
 
 $(document).ready(function () {
 
