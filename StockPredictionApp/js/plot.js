@@ -3,7 +3,10 @@
 */
 const plotData = function (data1, data2, label = null) {
 
-    var N = label ? label : [...Array(Math.max(data1.length, data2.length)).keys()];
+    //limit chart data to last X number of data points
+    var newdata1 = data1.slice(-50);
+    var newdata2 = data2.slice(-50);
+    var N = label ? label : [...Array(Math.max(newdata1.length, newdata2.length)).keys()];
 
     var config = {
         type: 'line',
@@ -27,7 +30,7 @@ const plotData = function (data1, data2, label = null) {
             responsive: true,
             title: {
                 display: true,
-                text: 'Stock Price Prediction'
+                text: 'Crypto Price Prediction'
             },
             tooltips: {
                 mode: 'index',
