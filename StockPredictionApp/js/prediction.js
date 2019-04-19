@@ -106,7 +106,7 @@ $(document).ready(function () {
         let company = $('#company').val().trim();
         
       //  $.getJSON(url.replace('%company%', company).toLowerCase()).then(function (data) {
-          $.getJSON("./data/Ethereum-Data.json").then(function (data) {
+          $.getJSON("./data/Eth-Data.json").then(function (data) {
             
             // Get the datetime labels use in graph
             let labels = data.map(function (val) { return val['date']; });
